@@ -41,6 +41,14 @@
 $route['default_controller'] = "home";
 $route['404_override'] = '';
 
-
+// example: '/en/about' -> use controller 'about'
+$route['^kh/(.+)$'] = "$1";
+$route['^jp/(.+)$'] = "$1";
+$route['^en/(.+)$'] = "$1";
+ 
+// '/en' and '/fr' -> use default controller
+$route['^kh$'] = $route['default_controller'];
+$route['^jp$'] = $route['default_controller'];
+$route['^en$'] = $route['default_controller'];
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

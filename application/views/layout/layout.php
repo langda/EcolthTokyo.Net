@@ -73,45 +73,48 @@
             <div class="navbar-inner">
                 <ul class="nav pull-left">
                     <li<?php echo checkActive('home/index'); ?>>
-                        <a href="<?php echo base_url(); ?>home/index">Home</a>
+                        <a href="<?php echo base_url(); ?>home/index"><?= lang('home');?></a>
                     </li>
                     <li<?php echo checkActive('home/about_us'); ?>>
-                        <a href="<?php echo base_url(); ?>home/about_us">About Us</a>
+                        <a href="<?php echo base_url(); ?>home/about_us"><?= lang('about');?></a>
                     </li>
                     <li<?php echo checkActiveDropDown('home/products'); ?>>
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                            Products <b class="caret"></b> 
+                            <?= lang('products');?> <b class="caret"></b> 
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="<?php echo base_url(); ?>home/products">Clothes</a></li>
-                            <li><a href="<?php echo base_url(); ?>home/products">Bags & Cartoons</a></li>
-                            <li><a href="<?php echo base_url(); ?>home/products">Shoes</a></li>
-                            <li><a href="<?php echo base_url(); ?>home/products">Kitchen Materials</a></li>
-                            <li><a href="<?php echo base_url(); ?>home/products">Furniture</a></li>
-                            <li><a href="<?php echo base_url(); ?>home/products">Electronic Devices</a></li>
+                            <li><a href="<?php echo base_url(); ?>home/products"><?= lang('clothes');?></a></li>
+                            <li><a href="<?php echo base_url(); ?>home/products"><?= lang('bags_and_cartoons');?></a></li>
+                            <li><a href="<?php echo base_url(); ?>home/products"><?= lang('shoes');?></a></li>
+                            <li><a href="<?php echo base_url(); ?>home/products"><?= lang('kitchen_material');?></a></li>
+                            <li><a href="<?php echo base_url(); ?>home/products"><?= lang('furniture');?></a></li>
+                            <li><a href="<?php echo base_url(); ?>home/products"><?= lang('electronic_devices');?></a></li>
                         </ul>
                     </li>
                    
                     <li<?php echo checkActive('home/ngo_activities'); ?>>
-                        <a href="<?php echo base_url(); ?>home/ngo_activities">NGO Activities</a>
+                        <a href="<?php echo base_url(); ?>home/ngo_activities"><?= lang('ngo_activities');?></a>
                     </li>
                     <li<?php echo checkActive('home/donation'); ?>>
-                        <a href="<?php echo base_url(); ?>home/donation">Donation</a>
+                        <a href="<?php echo base_url(); ?>home/donation"><?= lang('donation');?></a>
                     </li>
                     <li<?php echo checkActive('home/contact'); ?>>
-                        <a href="<?php echo base_url(); ?>home/contact">Contact Us</a>
+                        <a href="<?php echo base_url(); ?>home/contact"><?= lang('contact');?></a>
                     </li>
                 </ul>
                 <div class="shopping-cart pull-right">
-                    <a href="#" class="cart">
+         
+                  <!--   <a href="#" class="cart">
                         <span class="quantity" style="background-color:#ff6633;">JP</span>
                     </a>
                     <a href="#" class="cart">
                         <span class="quantity" style="background-color:#ff6633;">KH</span>
-                    </a>
-                    <a href="#" class="cart">
-                        <span class="quantity">EN</span>
-                    </a>                    
+                    </a> -->
+                    <?= "<a href='".$this->lang->switch_uri('jp')."' class='cart'><span class='quantity'>JP</span></a>" ?> 
+                    <?= "<a href='".$this->lang->switch_uri('kh')."' class='cart'><span class='quantity'>KH</span></a>" ?> 
+                    <?= "<a href='".$this->lang->switch_uri('en')."' class='cart'><span class='quantity'>EN</span></a>" ?> 
+                        
+                                        
                 </div>
             </div>
         </div>
@@ -144,13 +147,13 @@
     <div class="container">
         <div class="row-fluid">
             <div class="span12 clearfix">
-                <h3 class="widget-title"><span class="text-info">Our Branches</span> in Cambodia</h3>
+                <h3 class="widget-title"><span class="text-info"><?= lang('our_branches');?></span><?= lang('in_cambodia');?></h3>
                 <div class="widget-inner">
                     <ul class="unstyled">
-                        <li><span class="text-info"><h4 style="color:white;">First Branch:</h4></span> #277, St.271, 11Village, Sangkat Teuk laok 3, Khan Toul Kork, Phnom Penh.
+                        <li><span class="text-info"><h4 style="color:white;"><?= lang('first_branch'); ?>:</h4></span> #277, St.271, 11Village, Sangkat Teuk laok 3, Khan Toul Kork, Phnom Penh.
                             Tel: 098 25 2005 , 095 817 191 , 010 528 728
                         </li> <br/>
-                        <li><span class="text-info"><h4 style="color:white;">Second Branch:</h4></span> #35BFE, St.169, Sangkat Veal Vong, Khan 7 Makara, Phnom Penh. Tel: 017/010 232 244 , 070 890 221 , 097 54 333 88</li>                   
+                        <li><span class="text-info"><h4 style="color:white;"><?= lang('second_branch'); ?>:</h4></span> #35BFE, St.169, Sangkat Veal Vong, Khan 7 Makara, Phnom Penh. Tel: 017/010 232 244 , 070 890 221 , 097 54 333 88</li>                   
                     </ul>
                 </div>
             </div>
@@ -166,9 +169,9 @@
         <div class="row-fluid">
             <div class="span6">
                 <ul class="privacy inline">
-                    <li><a href="#">Products</a></li>
-                    <li><a href="#">Donation</a></li>
-                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#"><?= lang('footer_products');?></a></li>
+                    <li><a href="#"><?= lang('footer_donation');?></a></li>
+                    <li><a href="#"><?= lang('footer_contact');?></a></li>
                 </ul>
                 <p class="copyright">&copy; Copyright 2013. Powered by <a href="http://eleebiz.com/">Eleebiz Software</a>.</p>
             </div>

@@ -14,6 +14,7 @@ class Home extends BaseController{
     }
     
     function index(){
+        $this->lang->load('home');         
         $this->view("layout", "Ecolth | Japan secondhand shop", "", "home/index");
     }
     

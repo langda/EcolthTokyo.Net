@@ -170,7 +170,7 @@
 
             <!-- start: Categories -->
             <section class="widget inner categories-widget">
-                <h3 class="widget-title">Categories</h3>
+                <h3 class="widget-title"><?= lang('banner_categories');?></h3>
                 <ul class="icons clearfix">
                     <li><a href="<?php echo base_url(); ?>home/products">Clothes</a> (5)</li>
                     <li><a href="<?php echo base_url(); ?>home/products">Bags & Cartoons</a> (1)</li>
@@ -184,7 +184,7 @@
 
             <!-- start: Categories -->
             <section class="widget inner categories-widget">
-                <h3 class="widget-title">Charity Activities</h3>
+                <h3 class="widget-title"><?= lang('banner_charity_activities');?></h3>
                 <ul class="icons clearfix">
                     <div><a href="#"><img src="<?php echo base_url(); ?>img/banner_charity/banner01.jpg" /></a></div>
                     <div><a href="#"><img src="<?php echo base_url(); ?>img/banner_charity/banner03.jpg" /></a></div>
@@ -196,7 +196,7 @@
 
             <!-- start: Categories -->
             <section class="widget inner categories-widget">
-                <h3 class="widget-title">Promotions</h3>
+                <h3 class="widget-title"><?= lang('banner_promotions');?></h3>
                 <ul class="icons clearfix">
                     <div><a href="#"><img src="<?php echo base_url(); ?>img/banner_promotion/promo1.jpg" /></a></div>
                     <div><a href="#"><img src="<?php echo base_url(); ?>img/banner_promotion/xmas.png" /></a></div>

@@ -9,9 +9,11 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 class BaseController extends CI_Controller {
     function __construct() {
         parent::__construct();
+        $this->load->helper('language');
+        $this->load->helper('url');         
     }
     
-    function view($layout = "layout",$title = "", $metaData = "", $contentName = "index", $contentData = ""){
+    function view($layout = "layout",$title = "", $metaData = "", $contentName = "index", $contentData = ""){       
         $data["title"] = $title;
         $data["metaData"] = $metaData;
         $data["contentName"] = $contentName;
